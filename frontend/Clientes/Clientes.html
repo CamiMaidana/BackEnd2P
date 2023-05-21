@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/estilos.css"-->
     <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="/css/estilos.css">
-    <title>Restaurantes</title>
+    <title>Clientes</title>
 </head>
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -16,10 +16,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="Restaurantes.html">RESTAURANTES</a>
+              <a class="nav-link" href="../Restaurantes/Restaurantes.html">RESTAURANTES</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Clientes/Clientes.html">CLIENTES</a>
+              <a class="nav-link" href="Clientes.html">CLIENTES</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../Mesas/Mesas.html">MESAS</a>
@@ -32,14 +32,15 @@
       </nav>
     <h1>CRUD DE RESTAURANTES</h1>
     <div class="contenedor">
-        <div class="divtable">
-            <h3 style="text-align: center; margin-top: 15px;">LISTA DE RESTAURANTES</h3>
+            <div class="divtable">
+                <h3 style="text-align: center; margin-top: 15px;">LISTA DE CLIENTES</h3>
                 <table class="list" id="storeList">
                     <thead>
                         <tr>
                             <th style="width: 3px;">ID</th>
                             <th>NOMBRE</th>
-                            <th>DIRECCION</th>
+                            <th>APELLIDO</th>
+                            <th>CI</th>
                             <th>ACCIONES</th>
                         </tr>
                     </thead>
@@ -47,26 +48,31 @@
                         <!--Los datos se cargan mediante js-->
                     </tbody>
                 </table>
-        </div>
-        <div class="formAgregarRestaurantes">
-            <h5 style="text-align: center; margin-top: 5px;">AGREGAR RESTAURANTE</h5>
+            </div>
+        <div class="formAgregarClientes">
+            <h5 style="text-align: center; margin-top: 5px;">AGREGAR CLIENTE</h5>
             <form autocomplete="off" onsubmit="onFormSubmit()"><!--onsubmit="onFormSubmit()-->
                 <div class="formInput">
-                    <label for="nombreRestaurante" style="font-weight: bold">Nombre</label>
-                    <input type="text" name="nombreRestaurante" id="nombreRestaurante">
+                    <label for="nombreCliente" style="font-weight: bold">Nombre</label>
+                    <input type="text" name="nombreCliente" id="nombreCliente">
                 </div>
                 <div class="formInput">
-                    <label for="direccionRestaurante" style="font-weight: bold">Dirección</label>
-                    <input type="text" name="direccionRestaurante" id="direccionRestaurante">
+                    <label for="apellidoCliente" style="font-weight: bold">Apellido</label>
+                    <input type="text" name="apellidoCliente" id="apellidoCliente">
                 </div>
+                <div class="formInput">
+                    <label for="cedulaCliente" style="font-weight: bold">CI</label><br>
+                    <input type="number" name="cedulaCliente" id="cedulaCliente">
+                </div>
+                
                 <div class="btnAcciones" style="margin-left: 150px;">
                     <input type="reset" value="Cancelar">
                     <input type="submit" value="Agregar">
                 </div>
             </form>
         </div>
+    </div><!--Contenedor-->
     </div>
-    </div>
-    <script src="./Restaurantes.js"></script>
+    <script src="Clientes.js"></script>
 </body>
 </html>

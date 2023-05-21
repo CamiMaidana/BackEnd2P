@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/estilos.css"-->
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="/css/estilos.css">
+    <title>Reservas</title>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../index.html">SISTEMA DE RESERVA DE MESAS</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../Restaurantes/Restaurantes.html">RESTAURANTES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Clientes/Clientes.html">CLIENTES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Mesas/Mesas.html">MESAS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Reservas.html">RESERVAS</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <h1>CRUD DE RESTAURANTES</h1>
+    <div class="contenedor">
+          <div class="divtable">
+            <h3 style="text-align: center; margin-top: 15px;">LISTA DE RESERVAS </h3>
+                        <table class="list" id="storeList">
+                            <thead>
+                                <tr>
+                                    <th style="width: 3px;">ID</th>
+                                    <th>ID RESTAURANTE</th>
+                                    <th>ID FECHA</th>
+                                    <th>HORARIO</th>
+                                    <th>ID CLIENTE</th>
+                                    <th>CANTIDAD</th>
+                                    <th>ACCIONES</th>
+                                </tr>
+                            </thead>
+                            <tbody id = "tabla-body">
+                                <!--Los datos se cargan mediante js-->
+                            </tbody>
+                        </table>
+        </div>
+
+        <div class="formAgregarReservas">
+            <h5 style="text-align: center; margin-top: 5px;">AGREGAR RESERVAS</h5>
+            <form autocomplete="off" onsubmit="onFormSubmit()"><!--onsubmit="onFormSubmit()-->
+                <div class="formInput">
+                    <label for="nombreIdRestaurante" style="font-weight: bold">Restaurante</label>
+                    <select name="selectRestaurantes" id="selectRestaurantes"></select><br><br>
+                    <label for="fechaReserva" style="font-weight: bold">Fecha a Reservar</label>
+                    <input type="date" name="fechaReserva" id="fechaReserva"><br><br>
+                    <label for="deHora" style="font-weight: bold">Horario</label><br>
+                    <input type="checkbox" name="horaReserva1" id="horaReserva1">&nbsp;&nbsp;De 12 a 13&nbsp;&nbsp;
+                    <input type="checkbox" name="horaReserva2" id="horaReserva2">&nbsp;&nbsp;De 13 a 14<br><br>
+                    <input type="checkbox" name="horaReserva3" id="horaReserva3">&nbsp;&nbsp;De 14 a 15&nbsp;&nbsp;
+                    <input type="checkbox" name="horaReserva4" id="horaReserva4">&nbsp;&nbsp;De 19 a 20<br><br>
+                    <input type="checkbox" name="horaReserva5" id="horaReserva5">&nbsp;&nbsp;De 20 a 21&nbsp;&nbsp;
+                    <input type="checkbox" name="horaReserva6" id="horaReserva6">&nbsp;&nbsp;De 21 a 22<br><br>
+                    <input type="checkbox" name="horaReserva7" id="horaReserva7">&nbsp;&nbsp;De 22 a 23
+                </div>
+                <div class="btnAcciones" style="margin-left: 10px;">
+                    <button type="submit" >Ver mesas no reservadas</button><!--Selecciona la Mesa-->
+                    <input type="submit" value="Confirmar Reserva">
+                    <input type="reset" value="Cancelar" style="margin-left: 150px;">
+                    <input type="submit" value="Agregar">
+                    
+                </div>
+            </form>
+        </div>
+    </div><!--Contenedor-->
+    </div>
+    <script src="./Restaurantes.js"></script>
+</body>
+</html>
