@@ -8,4 +8,4 @@ router.post("/", postRestaurantes)
 router.put("/:id", putRestaurantes)
 router.delete("/:id", deleteRestaurantes)
 
-export default router
+export default router;

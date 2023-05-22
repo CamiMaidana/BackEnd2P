@@ -6,15 +6,15 @@ export const getReservas = async(req,res) =>{
 }
 
 export const postReservas = async(req,res) =>{
-    const {idRestaurante,idMesa,fecha,horario,idCliente,capacidad} = req.body
-    const reserva = await Reservas.create({idRestaurante,idMesa,fecha,horario,idCliente,capacidad})
+    const {idRestaurante,idMesa,fecha,horaInicio,horaFin,idCliente,capacidad} = req.body
+    const reserva = await Reservas.create({idRestaurante,idMesa,fecha,horaInicio,horaFin,idCliente,capacidad})
     res.json(reserva)
 }
 
 export const putReservas = async(req,res) =>{
     const {idRestaurante,idMesa,fecha,horario,idCliente,capacidad} = req.body
     const {id} = req.params
-    const reserva = await Reservas.update({idRestaurante,idMesa,fecha,horario,idCliente,capacidad}, {where: {id}})
+    const reserva = await Reservas.update({idRestaurante,idMesa,fecha,horaInicio,horaFin,idCliente,capacidad}, {where: {id}})
     res.json(reserva)
 }
 

@@ -34,14 +34,13 @@
     <div class="contenedor">
             <div class="divtable">
                 <h3 style="text-align: center; margin-top: 15px;">LISTA DE CLIENTES</h3>
-                <table class="list" id="storeList">
+                <table class="list" id="tabCliente">
                     <thead>
                         <tr>
                             <th style="width: 3px;">ID</th>
                             <th>NOMBRE</th>
                             <th>APELLIDO</th>
                             <th>CI</th>
-                            <th>ACCIONES</th>
                         </tr>
                     </thead>
                     <tbody id = "tabla-body">
@@ -49,9 +48,9 @@
                     </tbody>
                 </table>
             </div>
-        <div class="formAgregarClientes">
+        <div class="formAgregarClientes">        
             <h5 style="text-align: center; margin-top: 5px;">AGREGAR CLIENTE</h5>
-            <form autocomplete="off" onsubmit="onFormSubmit()"><!--onsubmit="onFormSubmit()-->
+            <form id="addForm" autocomplete="off"><!--onsubmit="onFormSubmit()-->
                 <div class="formInput">
                     <label for="nombreCliente" style="font-weight: bold">Nombre</label>
                     <input type="text" name="nombreCliente" id="nombreCliente">
@@ -66,13 +65,38 @@
                 </div>
                 
                 <div class="btnAcciones" style="margin-left: 150px;">
-                    <input type="reset" value="Cancelar">
-                    <input type="submit" value="Agregar">
+                    <input type="reset" value="Cancelar" id="btnreset">
+                    <input type="submit" value="Agregar" id="btnAgregar">
                 </div>
             </form>
+            <div class="editForm">
+                <h5 style="text-align: center; margin-top: 5px;">EDITAR CLIENTE</h5>
+                <form class="editform" id="editform">
+                    <div class="formInput">
+                        <label for="idCliente" style="font-weight: bold">ID</label><br>
+                        <input type="number" name="idCliente" id="idCliente">
+                    </div>
+                    <div class="formInput">
+                        <label for="nombreCliente" style="font-weight: bold">Nombre</label>
+                        <input type="text" name="nombreCliente" id="nombreCliente">
+                    </div>
+                    <div class="formInput">
+                        <label for="apellidoCliente" style="font-weight: bold">Apellido</label>
+                        <input type="text" name="apellidoCliente" id="apellidoCliente">
+                    </div>
+                    <div class="formInput">
+                        <label for="cedulaCliente" style="font-weight: bold">CI</label><br>
+                        <input type="number" name="cedulaCliente" id="cedulaCliente">
+                    </div>
+                    <button type="submit" style="margin-left: 85px;" id="btnEliminarCliente">Eliminar Cliente</button>
+                    <button type="submit" style="margin-left: 30px;" id="btnEditarCliente">Editar</button>
+                </form>
+            </div>
         </div>
+        
     </div><!--Contenedor-->
     </div>
-    <script src="Clientes.js"></script>
+    <div class ="text-light " id="respuesta"></div>
+    <script src="Clientes.js" type="module"></script>
 </body>
 </html>

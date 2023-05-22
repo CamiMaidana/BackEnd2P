@@ -34,7 +34,7 @@
     <div class="contenedor">
         <div class="divtable">
             <h3 style="text-align: center; margin-top: 15px;">LISTA DE RESTAURANTES</h3>
-                <table class="list" id="storeList">
+                <table class="list" id="list">
                     <thead>
                         <tr>
                             <th style="width: 3px;">ID</th>
@@ -44,13 +44,14 @@
                         </tr>
                     </thead>
                     <tbody id = "tabla-body">
+                      <tr></tr>
                         <!--Los datos se cargan mediante js-->
                     </tbody>
                 </table>
         </div>
         <div class="formAgregarRestaurantes">
             <h5 style="text-align: center; margin-top: 5px;">AGREGAR RESTAURANTE</h5>
-            <form autocomplete="off" onsubmit="onFormSubmit()"><!--onsubmit="onFormSubmit()-->
+            <form autocomplete="off" id="addForm" class="addForm"><!--onsubmit="onFormSubmit()-->
                 <div class="formInput">
                     <label for="nombreRestaurante" style="font-weight: bold">Nombre</label>
                     <input type="text" name="nombreRestaurante" id="nombreRestaurante">
@@ -61,12 +62,33 @@
                 </div>
                 <div class="btnAcciones" style="margin-left: 150px;">
                     <input type="reset" value="Cancelar">
-                    <input type="submit" value="Agregar">
+                    <input type="submit" value="Agregar" id="btnAgregar">
                 </div>
             </form>
+            <div class="editformRestaurante" id="editForm">
+              <h5 style="text-align: center; margin-top: 5px;">EDITAR RESTAURANTE</h5>
+              <form id="editForm"><!--onsubmit="onFormSubmit()-->
+                <div class="formInput">
+                  <label for="idRestaurante" style="font-weight: bold">ID</label><br>
+                  <input type="text" name="idRestaurante" id="idRestaurante">
+              </div>
+                  <div class="formInput">
+                      <label for="nombreRestaurante" style="font-weight: bold">Nombre</label>
+                      <input type="text" name="nombreRestaurante" id="nombreRestaurante">
+                  </div>
+                  <div class="formInput">
+                      <label for="direccionRestaurante" style="font-weight: bold">Dirección</label>
+                      <input type="text" name="direccionRestaurante" id="direccionRestaurante">
+                  </div>
+                  <div class="btnAcciones">
+                      <button type="submit" style="margin-left: 85px;" id="btnEliminarCliente">Eliminar Restaurante</button>
+                      <input type="submit" name="btnEditarRestaurante" id="btnEditarRestaurante" value="Editar">
+                  </div>
+              </form>
+          </div>
         </div>
     </div>
     </div>
-    <script src="./Restaurantes.js"></script>
+    <script src="Restaurantes.js" type="module"></script>
 </body>
 </html>

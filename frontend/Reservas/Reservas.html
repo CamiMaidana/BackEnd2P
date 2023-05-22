@@ -52,34 +52,61 @@
                         </table>
         </div>
 
-        <div class="formAgregarReservas">
+        <div class="formAgregarReservas"><br>
             <h5 style="text-align: center; margin-top: 5px;">AGREGAR RESERVAS</h5>
-            <form autocomplete="off" onsubmit="onFormSubmit()"><!--onsubmit="onFormSubmit()-->
+              <form autocomplete="off" id="addForm"><!--onsubmit="onFormSubmit()-->
                 <div class="formInput">
                     <label for="nombreIdRestaurante" style="font-weight: bold">Restaurante</label>
                     <select name="selectRestaurantes" id="selectRestaurantes"></select><br><br>
                     <label for="fechaReserva" style="font-weight: bold">Fecha a Reservar</label>
                     <input type="date" name="fechaReserva" id="fechaReserva"><br><br>
-                    <label for="deHora" style="font-weight: bold">Horario</label><br>
-                    <input type="checkbox" name="horaReserva1" id="horaReserva1">&nbsp;&nbsp;De 12 a 13&nbsp;&nbsp;
-                    <input type="checkbox" name="horaReserva2" id="horaReserva2">&nbsp;&nbsp;De 13 a 14<br><br>
-                    <input type="checkbox" name="horaReserva3" id="horaReserva3">&nbsp;&nbsp;De 14 a 15&nbsp;&nbsp;
-                    <input type="checkbox" name="horaReserva4" id="horaReserva4">&nbsp;&nbsp;De 19 a 20<br><br>
-                    <input type="checkbox" name="horaReserva5" id="horaReserva5">&nbsp;&nbsp;De 20 a 21&nbsp;&nbsp;
-                    <input type="checkbox" name="horaReserva6" id="horaReserva6">&nbsp;&nbsp;De 21 a 22<br><br>
-                    <input type="checkbox" name="horaReserva7" id="horaReserva7">&nbsp;&nbsp;De 22 a 23
+                    <label for="dehora">De </label>
+                    <select name="horaInicio" id="horaInicio">
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                    </select>
+                    <label for="A">De </label>
+                    <select name="horaFin" id="horaFin">
+                        <option value="14">14</option>
+                        <option value="14">15</option>
+                        <option value="15">16</option>
+                        <option value="16">17</option>
+                        <option value="17">18</option>
+                        <option value="18">19</option>
+                        <option value="19">20</option>
+                        <option value="20">21</option>
+                        <option value="21">22</option>
+                        <option value="22">23</option>
+                    </select><br>
                 </div>
-                <div class="btnAcciones" style="margin-left: 10px;">
-                    <button type="submit" >Ver mesas no reservadas</button><!--Selecciona la Mesa-->
-                    <input type="submit" value="Confirmar Reserva">
-                    <input type="reset" value="Cancelar" style="margin-left: 150px;">
-                    <input type="submit" value="Agregar">
-                    
+                  <div class="btnAcciones" style="margin-left: 10px;">
+                      <button type="submit" >Ver mesas no reservadas</button><!--Selecciona la Mesa-->
+                      <input type="submit" value="Confirmar Reserva">
+                      <input type="reset" value="Cancelar" style="margin-left: 150px;">
+                      <input type="submit" value="Agregar">
                 </div>
             </form>
+            <div class="confirmar">
+              <h5 style="text-align: center; margin-top: 5px;">CONFIRMAR RESERVAS</h5>
+              <form name="confirmarReserva" id="confirmarReserva">
+                <label for="cedula" style="margin-left: 15px; margin-top: 20px;"> CI</label>
+                <input type="number" style="margin-left: 15px;" name="cedula" id="cedulaCliente">
+                <input type="submit" value="Reservar" id="Reservar" style="margin-left: 235px;"><br>
+                <a href="../Clientes/Clientes.html" style="margin-left: 15px;">REGISTRARSE </a>
+            </form>
+            </div>
         </div>
     </div><!--Contenedor-->
-    </div>
-    <script src="./Restaurantes.js"></script>
+    <script src="./Restaurantes.js" type="module"></script>
 </body>
 </html>
+

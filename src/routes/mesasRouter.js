@@ -8,4 +8,4 @@ router.post("/", postMesas)
 router.put("/:id", putMesas)
 router.delete("/:id", deleteMesas)
 
-export default router
+export default router;

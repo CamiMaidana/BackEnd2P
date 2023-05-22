@@ -54,7 +54,7 @@
         </div>
         <div class="formAgregarMesas">
             <h5 style="text-align: center; margin-top: 5px;">AGREGAR MESA</h5>
-            <form autocomplete="off" onsubmit="onFormSubmit()"><!--onsubmit="onFormSubmit()-->
+            <form id="addForm" autocomplete="off"><!--onsubmit="onFormSubmit()-->
                 <div class="formInput">
                     <label for="nombreMesa" style="font-weight: bold">Nombre</label>
                     <input type="text" name="nombreMesa" id="nombreMesa">
@@ -72,8 +72,8 @@
                     <input type="number" name="posiciony" id="posiciony">
                 </div>
                 <div class="formInput">
-                    <label for="nroPiso" style="font-weight: bold">Nro de Piso</label>
-                    <input type="number" name="nroPiso" id="nroPiso">
+                    <label for="nroPiso" style="font-weight: bold" >Nro de Piso</label>
+                    <input type="number" name="nroPiso" id="nroPiso" value="1">
                 </div>
                 <div class="formInput">
                     <label for="nroComensales" style="font-weight: bold">Nro de Comensales</label>
@@ -84,9 +84,44 @@
                     <input type="submit" value="Agregar">
                 </div>
             </form>
+            <div class="editformMesas" id="editForm">
+                <h5 style="text-align: center; margin-top: 5px;">EDITAR MESA</h5>
+            <form autocomplete="off" onsubmit="onFormSubmit()"><!--onsubmit="onFormSubmit()-->
+                <div class="formInput">
+                    <label for="idMesa" style="font-weight: bold">Nombre</label>
+                    <input type="text" name="idMesa" id="idMesa">
+                </div>
+                <div class="formInput">
+                    <label for="nombreMesa" style="font-weight: bold">Nombre</label>
+                    <input type="text" name="nombreMesa" id="nombreMesa">
+                </div>
+                <div class="formInput">
+                    <label for="idRestaurante" style="font-weight: bold">ID Restaurante</label>
+                    <input type="number" name="idRestaurante" id="idRestaurante">
+                </div>
+                <div class="formInput">
+                    <label for="posicionx" style="font-weight: bold">Posición X</label>
+                    <input type="number" name="posicionx" id="posicionx">
+                </div>
+                <div class="formInput">
+                    <label for="posiciony" style="font-weight: bold">Posición Y</label>
+                    <input type="number" name="posiciony" id="posiciony">
+                </div>
+                <div class="formInput">
+                    <label for="nroPiso" style="font-weight: bold" >Nro de Piso</label>
+                    <input type="number" name="nroPiso" id="nroPiso" value="1">
+                </div>
+                <div class="formInput">
+                    <label for="nroComensales" style="font-weight: bold">Nro de Comensales</label>
+                    <input type="number" name="nroComensales" id="nroComensales">
+                </div>
+                <!--button type="submit" style="margin-left: 235px;">Editar</button-->
+                <button type="submit" style="margin-left: 85px;" id="btnEliminarMesa">Eliminar Mesa</button>
+                    <button type="submit" style="margin-left: 30px;" id="btnEditarMesa">Editar</button>
+            </div>
         </div>
     </div><!--Contenedor-->
     </div>
-    <script src="Mesas.js"></script>
+    <script src="Mesas.js" type="module"></script>
 </body>
 </html>

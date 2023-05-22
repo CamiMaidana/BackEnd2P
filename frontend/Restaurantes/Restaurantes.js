@@ -2,8 +2,6 @@
 //document.getElementById
 
 const API_URL = "http://localhost:3000/Restaurante"
-
-
 const tablabody = document.getElementById("tabla-body")
 
 async function mostrarTabla(){

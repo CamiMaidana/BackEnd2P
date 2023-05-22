@@ -1,10 +1,11 @@
-import Sequelize from "sequelize";
+import {Sequelize} from "sequelize";
 
 export const sequelize = new Sequelize({
     dialect: "sqlite",
     storage: "./db.sqlite3"
 })
 
+//Definicion de los Modelos
 export const Restaurante = sequelize.define("Restaurante", {
     id: {
         type: Sequelize.INTEGER,
@@ -62,7 +63,12 @@ export const Mesas = sequelize.define("Mesas",{
         type: Sequelize.INTEGER,
     },
 })
-
+//Existe una relación de uno a varios entre Restaurantes y Mesas
+Restaurante.hasMany(Mesas, {
+    foreignKey: {
+        name: 'IdRestaurante',
+    }
+});
 export const Reservas = sequelize.define("Reservas",{
     id:{
         type: Sequelize.INTEGER,
@@ -78,7 +84,10 @@ export const Reservas = sequelize.define("Reservas",{
     fecha:{
         type: Sequelize.DATE,
     },
-    horario:{
+    horaInicio:{
+        type: Sequelize.STRING,
+    },
+    horaFin:{
         type: Sequelize.STRING,
     },
     idCliente:{

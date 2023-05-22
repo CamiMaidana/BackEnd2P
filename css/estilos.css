@@ -147,7 +147,7 @@ button:hover{
 
 
 .formAgregarClientes{
-	margin: 63px 0 0 1px;
+	margin: 63px 0 300px 1px;
 	width: 320px;
 	height: 325px;
 	border: solid 1px;
@@ -165,16 +165,45 @@ button:hover{
 .formAgregarReservas{
 	margin: 63px 0 0 1px;
 	width: 320px;
-	height: 450px;
+	height: 310px;
 	border: solid 1px;
   background: rgba(137, 159, 168, 0.808);
 }
 
+.editForm{
+	margin: 50px 0 0 1px;
+	width: 320px;
+	height: 390px;
+	border: solid 1px;
+  background: rgba(137, 159, 168, 0.808);
+}
 
+.editformMesas{
+  margin: 50px 0 0 1px;
+	width: 320px;
+	height: 615px;
+	border: solid 1px;
+  background: rgba(137, 159, 168, 0.808);
+}
 
+.editformRestaurante{
+  margin: 63px 0 0 1px;
+	width: 320px;
+	height: 315px;
+	border: solid 1px;
+  background: rgba(137, 159, 168, 0.808);
+}
 
 .box{
   width: 1250px;
   height: 1500px;
   float: left;  
+}
+
+.confirmar{
+  margin: 50px 0 0 1px;
+	width: 320px;
+	height: 215px;
+	border: solid 1px;
+  background: rgba(137, 159, 168, 0.808);
 }
