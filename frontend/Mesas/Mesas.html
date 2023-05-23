@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/estilos.css"-->
+    link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/estilos.css"
     <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="/css/estilos.css">
     <title>Mesas</title>
@@ -48,13 +48,13 @@
                     </tr>
                 </thead>
                 <tbody id = "tabla-body">
-                    <!--Los datos se cargan mediante js-->
+                    <!--Los datos se cargan mediante js
                 </tbody>
             </table>
         </div>
         <div class="formAgregarMesas">
             <h5 style="text-align: center; margin-top: 5px;">AGREGAR MESA</h5>
-            <form autocomplete="off" onsubmit="onFormSubmit()"><!--onsubmit="onFormSubmit()-->
+            <form autocomplete="off" onsubmit="onFormSubmit()"><!--onsubmit="onFormSubmit()
                 <div class="formInput">
                     <label for="nombreMesa" style="font-weight: bold">Nombre</label>
                     <input type="text" name="nombreMesa" id="nombreMesa">
@@ -85,8 +85,98 @@
                 </div>
             </form>
         </div>
-    </div><!--Contenedor-->
+    </div><!--Contenedor
     </div>
     <script src="Mesas.js"></script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="/css/estilos.css">
+    <title>Mesas</title>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../index.html">SISTEMA DE RESERVA DE MESAS</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../Restaurantes/Restaurantes.html">RESTAURANTES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Clientes/Clientes.html">CLIENTES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Mesas.html">MESAS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Reservas/Reservas.html">RESERVAS</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <h1>CRUD DE MESAS</h1>
+    <div class="contenedor">
+        <div class="divtable">
+            <h3 style="text-align: center; margin-top: 15px;">LISTA DE MESAS</h3>
+            <table class="list" id="mesasList">
+                <thead>
+                    <tr>
+                        <th style="width: 3px;">ID</th>
+                        <th>NOMBRE</th>
+                        <th>ID RESTAURANTE</th>
+                        <th>POSICIÓN X</th>
+                        <th>POSICIÓN Y</th>
+                        <th>PISO</th>
+                        <th>CAPACIDAD</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-body">
+                    <!-- Los datos se cargan mediante JS -->
+                </tbody>
+            </table>
+        </div>
+        <div class="formAgregarMesas">
+            <h5 style="text-align: center; margin-top: 5px;">AGREGAR MESA</h5>
+            <form autocomplete="off" id="formulario">
+                <div class="formInput">
+                    <label for="nombreMesa" style="font-weight: bold">Nombre</label>
+                    <input type="text" name="nombreMesa" id="nombreMesa">
+                </div>
+                <div class="formInput">
+                    <label for="idRestaurante" style="font-weight: bold">ID Restaurante</label>
+                    <input type="text" name="idRestaurante" id="idRestaurante">
+                </div>
+                <div class="formInput">
+                    <label for="posicionX" style="font-weight: bold">Posición X</label>
+                    <input type="text" name="posicionX" id="posicionX">
+                </div>
+                <div class="formInput">
+                    <label for="posicionY" style="font-weight: bold">Posición Y</label>
+                    <input type="text" name="posicionY" id="posicionY">
+                </div>
+                <div class="formInput">
+                    <label for="piso" style="font-weight: bold">Piso</label>
+                    <input type="text" name="piso" id="piso">
+                </div>
+                <div class="formInput">
+                    <label for="capacidad" style="font-weight: bold">Capacidad</label>
+                    <input type="text" name="capacidad" id="capacidad">
+                </div>
+                <div class="btnAcciones" style="margin-left: 150px;">
+                    <input type="reset" value="Cancelar">
+                    <input type="submit" value="Agregar">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./Mesas.js"></script>
 </body>
 </html>

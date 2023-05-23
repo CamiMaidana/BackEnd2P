@@ -178,73 +178,61 @@
     </script>
 </body>
 </html>
--->
-<!DOCTYPE html>
+--><!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
-    <link type="text/css" rel="stylesheet" href="/css/estilos.css">
-    <title>Restaurantes</title>
-</head>
-<body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
+      <link type="text/css" rel="stylesheet" href="/css/estilos.css">
+      <title>Restaurantes</title>
+  </head>
+  <body>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="../index.html">SISTEMA DE RESERVA DE MESAS</a>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="Restaurantes.html">RESTAURANTES</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Clientes/Clientes.html">CLIENTES</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Mesas/Mesas.html">MESAS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Reservas/Reservas.html">RESERVAS</a>
-            </li>
           </ul>
         </div>
     </nav>
-    <h1>CRUD DE RESTAURANTES</h1>
-    <div class="contenedor">
-        <div class="divtable">
-            <h3 style="text-align: center; margin-top: 15px;">LISTA DE RESTAURANTES</h3>
-            <table class="list" id="storeList">
-                <thead>
-                    <tr>
-                        <th style="width: 3px;">ID</th>
-                        <th>NOMBRE</th>
-                        <th>DIRECCION</th>
-                        <th>ACCIONES</th>
-                    </tr>
-                </thead>
-                <tbody id="tabla-body">
-                    <!-- Los datos se cargan mediante JS -->
-                </tbody>
-            </table>
-        </div>
-        <div class="formAgregarRestaurantes">
-            <h5 style="text-align: center; margin-top: 5px;">AGREGAR RESTAURANTE</h5>
-            <form autocomplete="off" id="formulario">
-                <div class="formInput">
-                    <label for="nombreRestaurante" style="font-weight: bold">Nombre</label>
-                    <input type="text" name="nombreRestaurante" id="nombreRestaurante">
-                </div>
-                <div class="formInput">
-                    <label for="direccionRestaurante" style="font-weight: bold">Dirección</label>
-                    <input type="text" name="direccionRestaurante" id="direccionRestaurante">
-                </div>
-                <div class="btnAcciones" style="margin-left: 150px;">
-                    <input type="reset" value="Cancelar">
-                    <input type="submit" value="Agregar">
-                </div>
-            </form>
-        </div>
-    </div>
-    <script src="./Restaurantes.js"></script>
-</body>
-</html>
+      <h1>CRUD DE RESTAURANTES</h1>
+      <div class="contenedor">
+          <div class="divtable">
+              <h3 style="text-align: center; margin-top: 15px;">LISTA DE RESTAURANTES</h3>
+              <table class="list" id="storeList">
+                  <thead>
+                      <tr>
+                          <th style="width: 3px;">ID</th>
+                          <th>NOMBRE</th>
+                          <th>DIRECCION</th>
+                          <th>ACCIONES</th>
+                      </tr>
+                  </thead>
+                  <tbody id="tabla-body">
+                      <!-- Los datos se cargan mediante JS -->
+                  </tbody>
+              </table>
+          </div>
+          <div class="formAgregarRestaurantes">
+              <h5 style="text-align: center; margin-top: 5px;">AGREGAR RESTAURANTE</h5>
+              <form autocomplete="off" id="formulario">
+                  <div class="formInput">
+                      <label for="nombreRestaurante" style="font-weight: bold">Nombre</label>
+                      <input type="text" name="nombreRestaurante" id="nombreRestaurante">
+                  </div>
+                  <div class="formInput">
+                      <label for="direccionRestaurante" style="font-weight: bold">Dirección</label>
+                      <input type="text" name="direccionRestaurante" id="direccionRestaurante">
+                  </div>
+                  <div class="btnAcciones" style="margin-left: 150px;">
+                      <input type="reset" value="Cancelar">
+                      <input type="submit" value="Agregar">
+                  </div>
+              </form>
+          </div>
+      </div>
+      <script src="Restaurantes.js"></script>
+  </body>
+  </html>
+  

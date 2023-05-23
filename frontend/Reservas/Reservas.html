@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/estilos.css"-->
+    link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/estilos.css"
     <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="/css/estilos.css">
     <title>Reservas</title>
@@ -47,14 +47,14 @@
                                 </tr>
                             </thead>
                             <tbody id = "tabla-body">
-                                <!--Los datos se cargan mediante js-->
+                                <!--Los datos se cargan mediante js
                             </tbody>
                         </table>
         </div>
 
         <div class="formAgregarReservas">
             <h5 style="text-align: center; margin-top: 5px;">AGREGAR RESERVAS</h5>
-            <form autocomplete="off" onsubmit="onFormSubmit()"><!--onsubmit="onFormSubmit()-->
+            <form autocomplete="off" onsubmit="onFormSubmit()"><!--onsubmit="onFormSubmit()--
                 <div class="formInput">
                     <label for="nombreIdRestaurante" style="font-weight: bold">Restaurante</label>
                     <select name="selectRestaurantes" id="selectRestaurantes"></select><br><br>
@@ -70,7 +70,7 @@
                     <input type="checkbox" name="horaReserva7" id="horaReserva7">&nbsp;&nbsp;De 22 a 23
                 </div>
                 <div class="btnAcciones" style="margin-left: 10px;">
-                    <button type="submit" >Ver mesas no reservadas</button><!--Selecciona la Mesa-->
+                    <button type="submit" >Ver mesas no reservadas</button><!--Selecciona la Mesa--
                     <input type="submit" value="Confirmar Reserva">
                     <input type="reset" value="Cancelar" style="margin-left: 150px;">
                     <input type="submit" value="Agregar">
@@ -78,8 +78,70 @@
                 </div>
             </form>
         </div>
-    </div><!--Contenedor-->
+    </div><!--Contenedor--
     </div>
-    <script src="./Restaurantes.js"></script>
+    <script src="./Reservas.js"></script>
 </body>
 </html>
+--><!DOCTYPE html>
+<html>
+  <head>
+    <title>Reservas de Mesas</title>
+  </head>
+  <body>
+    <h1>Reservas de Mesas</h1>
+    <form id="formulario">
+      <div>
+        <label for="restaurante">Restaurante:</label>
+        <select id="restaurante" required></select>
+      </div>
+      <div>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required>
+      </div>
+      <div>
+        <label for="horarios">Horario:</label>
+        <select id="horarios" multiple required>
+          <option value="12-13">12 a 13</option>
+          <option value="13-14">13 a 14</option>
+          <option value="14-15">14 a 15</option>
+          <option value="19-20">19 a 20</option>
+          <option value="20-21">20 a 21</option>
+          <option value="21-22">21 a 22</option>
+          <option value="22-23">22 a 23</option>
+        </select>
+      </div>
+      <div>
+        <label for="capacidad">Capacidad:</label>
+        <input type="number" id="capacidad" required>
+      </div>
+      <div>
+        <label for="nombreCliente">Nombre:</label>
+        <input type="text" id="nombreCliente" required>
+      </div>
+      <div>
+        <label for="apellidoCliente">Apellido:</label>
+        <input type="text" id="apellidoCliente" required>
+      </div>
+      <div>
+        <label for="cedulaCliente">Cédula:</label>
+        <input type="text" id="cedulaCliente" required>
+      </div>
+      <button type="submit">Buscar Mesas Disponibles</button>
+    </form>
+    <h2>Mesas Disponibles</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Capacidad</th>
+        </tr>
+      </thead>
+      <tbody id="mesasBody"></tbody>
+    </table>
+    <button onclick="reservarMesa()">Reservar</button>
+  
+    <script src="reservas.js"></script>
+  </body>
+  </html>
+  

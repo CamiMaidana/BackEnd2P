@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/estilos.css"-->
-    <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
-    <link type="text/css" rel="stylesheet" href="/css/estilos.css">
     <title>Clientes</title>
 </head>
 <body>
@@ -15,64 +11,47 @@
         <a class="navbar-brand" href="../index.html">SISTEMA DE RESERVA DE MESAS</a>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../Restaurantes/Restaurantes.html">RESTAURANTES</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Clientes.html">CLIENTES</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Mesas/Mesas.html">MESAS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Reservas/Reservas.html">RESERVAS</a>
-            </li>
           </ul>
         </div>
-      </nav>
-    <h1>CRUD DE RESTAURANTES</h1>
-    <div class="contenedor">
-            <div class="divtable">
-                <h3 style="text-align: center; margin-top: 15px;">LISTA DE CLIENTES</h3>
-                <table class="list" id="storeList">
-                    <thead>
-                        <tr>
-                            <th style="width: 3px;">ID</th>
-                            <th>NOMBRE</th>
-                            <th>APELLIDO</th>
-                            <th>CI</th>
-                            <th>ACCIONES</th>
-                        </tr>
-                    </thead>
-                    <tbody id = "tabla-body">
-                        <!--Los datos se cargan mediante js-->
-                    </tbody>
-                </table>
-            </div>
-        <div class="formAgregarClientes">
-            <h5 style="text-align: center; margin-top: 5px;">AGREGAR CLIENTE</h5>
-            <form autocomplete="off" onsubmit="onFormSubmit()"><!--onsubmit="onFormSubmit()-->
-                <div class="formInput">
-                    <label for="nombreCliente" style="font-weight: bold">Nombre</label>
-                    <input type="text" name="nombreCliente" id="nombreCliente">
-                </div>
-                <div class="formInput">
-                    <label for="apellidoCliente" style="font-weight: bold">Apellido</label>
-                    <input type="text" name="apellidoCliente" id="apellidoCliente">
-                </div>
-                <div class="formInput">
-                    <label for="cedulaCliente" style="font-weight: bold">CI</label><br>
-                    <input type="number" name="cedulaCliente" id="cedulaCliente">
-                </div>
-                
-                <div class="btnAcciones" style="margin-left: 150px;">
-                    <input type="reset" value="Cancelar">
-                    <input type="submit" value="Agregar">
-                </div>
-            </form>
-        </div>
-    </div><!--Contenedor-->
+    </nav>
+    <h1>Gestión de Clientes</h1>
+
+    <div>
+        <h2>Listado de Clientes</h2>
+        <table id="clientes-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cédula</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                </tr>
+            </thead>
+            <tbody id="clientes-body">
+                <!-- Los datos de los clientes se cargarán mediante JavaScript -->
+            </tbody>
+        </table>
     </div>
+
+    <div>
+        <h2>Agregar Cliente</h2>
+        <form id="cliente-form">
+            <div>
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula">
+            </div>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+            <div>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido">
+            </div>
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+
     <script src="Clientes.js"></script>
 </body>
 </html>
