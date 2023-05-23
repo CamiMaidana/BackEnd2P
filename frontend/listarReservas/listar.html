@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar</title>
+</head>
+<body>
+    <h1>Gestión de reservas</h1>
+
+    <div>
+        <h2>Listado de reservas</h2>
+
+        <div>
+            <label for="restaurante-filtro">Filtrar por Restaurante:</label>
+            <input type="text" id="restaurante-filtro">
+        </div>
+
+        <div>
+            <label for="fecha-filtro">Filtrar por Fecha:</label>
+            <input type="text" id="fecha-filtro">
+        </div>
+
+        <div>
+            <label for="cliente-filtro">Filtrar por Cliente:</label>
+            <input type="text" id="cliente-filtro">
+        </div>
+
+        <table id="reservas-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Id restaurantes</th>
+                    <th>ID Mesa</th>
+                    <th>Fecha</th>
+                    <th>Horario</th>
+                    <th>ID Cliente</th>
+                    <th>Capacidad</th>
+                    <th>CreatedAt</th>
+                    <th>UodateAt</th>
+                </tr>
+            </thead>
+            <tbody id="reservas-body">
+                <!-- Los datos de las reservas se cargarán mediante JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="./listar.js"></script>
+</body>
+</html>
