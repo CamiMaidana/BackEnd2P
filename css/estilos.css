@@ -197,7 +197,6 @@ button:hover{
   width: 1900px;
 	height: 1200px;
   margin: 0 0 0 0;
-  background-color: blue;
 }
 
 .filtro{
@@ -206,7 +205,6 @@ button:hover{
 	height: 220px;
   margin: 5px 0 0 20px;
   margin-top: 40px;
-  background: rgba(137, 159, 168, 0.808);
 }
 .tab{
   float: left;
