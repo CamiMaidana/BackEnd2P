@@ -5,6 +5,10 @@ import RestauranteRouter from "./src/routes/restaurantesRouter.js"
 import ClienteRouter from "./src/routes/clienteRouter.js"
 import MesasRouter from "./src/routes/mesasRouter.js" 
 import ReservasRouter from "./src/routes/reservasRouter.js"
+import CategoriaRouter from "./src/routes/categoriaRouter.js"
+import ProductosRouter from "./src/routes/productosRouter.js"
+import CabeceraRouter from "./src/routes/cabeceraRouter.js"
+
 
 await sequelize.sync()
 
@@ -24,6 +28,10 @@ app.use("/Restaurante", RestauranteRouter)
 app.use("/Cliente",ClienteRouter)
 app.use("/Mesas",MesasRouter)
 app.use("/Reservas",ReservasRouter)
+app.use("/Categoria", CategoriaRouter)
+app.use("/Productos", ProductosRouter)
+app.use("/Cabecera", CabeceraRouter)
+
 
 const PORT = 3000
 app.listen(PORT,()=>{

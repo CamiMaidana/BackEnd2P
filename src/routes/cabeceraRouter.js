@@ -4,7 +4,7 @@ const router = express.Router()
 
 router.get("/", getCabecera)  //al pasar asi pasa la funcion entera si pasa como getCabecera(), pasa el resultado de la funcion 
 router.post("/", postCabecera)
-router.put("/:id", putCabecera)
-router.delete("/:id", deleteCabecera)
+router.put("/:idmesa", putCabecera)
+router.delete("/:idmesa", deleteCabecera)
 
 export default router
