@@ -8,6 +8,7 @@ import ReservasRouter from "./src/routes/reservasRouter.js"
 import CategoriaRouter from "./src/routes/categoriaRouter.js"
 import ProductosRouter from "./src/routes/productosRouter.js"
 import CabeceraRouter from "./src/routes/cabeceraRouter.js"
+import DetallesRouter from "./src/routes/detallesRouter.js"
 
 
 await sequelize.sync()
@@ -31,6 +32,7 @@ app.use("/Reservas",ReservasRouter)
 app.use("/Categoria", CategoriaRouter)
 app.use("/Productos", ProductosRouter)
 app.use("/Cabecera", CabeceraRouter)
+app.use("/Detalles", DetallesRouter)
 
 
 const PORT = 3000

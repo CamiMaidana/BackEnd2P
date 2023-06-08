@@ -150,8 +150,6 @@ export const Cabecera = sequelize.define("Cabecera", {
 export const Detalles = sequelize.define("Detalles", {
     idproducto: {
         type: Sequelize.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
     },
     cantidad: {
         type: Sequelize.INTEGER,

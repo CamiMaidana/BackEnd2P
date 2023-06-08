@@ -1,0 +1,72 @@
+<!--DOCTYPE html>
+<html>
+  <head>
+    <title>Consumos por mesas</title>
+  </head>
+  <body>
+    <h1>Consumos por mesas</h1>
+    <form id="formulario">
+      <div>
+        <label for="mesas">Mesa:</label>
+        <select id="mesas" required></select>
+      </div>
+      <button type="submit">Buscar Mesa</button>
+    </form>
+    <h2>Mesas Disponibles</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Total actual</th>
+        </tr>
+      </thead>
+      <tbody id="mesasBody"></tbody>
+    </table>
+    <button onclick="reservarMesa()">Reservar</button>
+  
+    <script src="reservas.js"></script>
+  </body>
+  </html>
+-->
+
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Gestión de Consumo</title>
+  <script src="Consumo.js" defer></script>
+</head>
+<body>
+  <h1>Gestión de Consumo</h1>
+
+  <h2>Nueva Cabecera de Consumo</h2>
+  <form id="cabeceraForm">
+    <label for="idmesa">ID de la Mesa:</label>
+    <input type="number" id="idmesa" required><br>
+
+    <label for="idcliente">ID del Cliente:</label>
+    <input type="number" id="idcliente" required><br>
+
+    <label for="estado">Estado:</label>
+    <input type="text" id="estado" required><br>
+
+    <label for="total">Total:</label>
+    <input type="number" id="total" required><br>
+
+    <button type="button" onclick="agregarCabecera()">Agregar Cabecera</button>
+  </form>
+
+  <h2>Nuevo Detalle de Consumo</h2>
+  <form id="detalleForm">
+    <label for="idcabecera">ID de la Cabecera:</label>
+    <input type="number" id="idcabecera" required><br>
+
+    <label for="idproducto">ID del Producto:</label>
+    <input type="number" id="idproducto" required><br>
+
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" required><br>
+
+    <button type="button" onclick="agregarDetalle()">Agregar Detalle</button>
+  </form>
+</body>
+</html>
