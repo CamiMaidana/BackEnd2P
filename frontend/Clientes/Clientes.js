@@ -40,6 +40,13 @@ const cargarTablaClientes = async () => {
             celdaApellido.textContent = cliente.apellido;
             fila.appendChild(celdaApellido);
 
+            const celdaAcciones = document.createElement('td');
+            const botonEliminar = document.createElement('button');
+            botonEliminar.textContent = 'Eliminar';
+            botonEliminar.addEventListener('click', () => eliminarRestaurante(cliente.id));
+            celdaAcciones.appendChild(botonEliminar);
+            fila.appendChild(celdaAcciones);
+
             // Agrega la fila a la tabla
             clientesBody.appendChild(fila);
         });
@@ -96,6 +103,25 @@ const agregarCliente = async (event) => {
 
 // Agregar un listener para el evento submit del formulario
 clienteForm.addEventListener('submit', agregarCliente);
+
+// Función para eliminar un restaurante según su ID
+const eliminarRestaurante = async (clienteId) => {
+    try {
+        // Realiza una solicitud DELETE al backend para eliminar el restaurante
+        const response = await fetch(`http://localhost:3000/cliente/${clienteId}`, {
+            method: 'DELETE'
+        });
+
+        if (response.ok) {
+            console.log('Cliente eliminado:', clienteId);
+            cargarTablaClientes(); // Vuelve a cargar la tabla actualizada
+        } else {
+            console.error('Error al eliminar el cliente');
+        }
+    } catch (error) {
+        console.error(error);
+    }
+};
 
 // Cargar la tabla de clientes al cargar la página
 window.addEventListener('DOMContentLoaded', cargarTablaClientes);
