@@ -6,8 +6,8 @@ export const getCabecera = async(req,res) =>{
 }
 
 export const postCabecera = async(req,res) =>{
-    const {idcliente,estado, total,fechainicio,horainicio,fechafin,horafin} = req.body
-    const cabecera = await Cabecera.create({idcliente,estado, total,fechainicio,horainicio,fechafin,horafin})
+    const {idmesa,idcliente,estado, total,fechainicio,horainicio,fechafin,horafin} = req.body
+    const cabecera = await Cabecera.create({idmesa, idcliente,estado, total,fechainicio,horainicio,fechafin,horafin})
     res.json(cabecera)
 }
 

@@ -112,6 +112,10 @@ export const Productos = sequelize.define("Producto", {
     },
     idcategoria: {
         type: Sequelize.INTEGER,
+        references: {
+            model: Categoria,
+            key: 'id'
+        }
     },
     precioventa: {
         type: Sequelize.INTEGER,
@@ -119,13 +123,24 @@ export const Productos = sequelize.define("Producto", {
 })
 
 export const Cabecera = sequelize.define("Cabecera", {
-    idmesa: {
+    id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
+    idmesa: {
+        type: Sequelize.INTEGER,
+        references: {
+            model: Mesas,
+            key: 'id'
+        }
+    },
     idcliente: {
         type: Sequelize.INTEGER,
+        references: {
+            model: Cliente,
+            key: 'id'
+        }
     },
     estado: {
         type: Sequelize.STRING
@@ -148,8 +163,24 @@ export const Cabecera = sequelize.define("Cabecera", {
 })
 
 export const Detalles = sequelize.define("Detalles", {
+    id:{
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    idcabecera:{
+        type: Sequelize.INTEGER,
+        references: {
+            model: Cabecera,
+            key: 'id'
+        }
+    },
     idproducto: {
         type: Sequelize.INTEGER,
+        references: {
+            model: Productos,
+            key: 'id'
+        }
     },
     cantidad: {
         type: Sequelize.INTEGER,

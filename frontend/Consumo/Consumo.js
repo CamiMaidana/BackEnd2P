@@ -14,7 +14,7 @@ function agregarCabecera() {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        idmesa: idmesa,
+        idmesa: idmesa, 
         idcliente: idcliente,
         estado: estado,
         total: total
@@ -22,6 +22,7 @@ function agregarCabecera() {
     })
     .then(function(response) {
       if (response.ok) {
+        console.log("idmesA",idmesa);
         console.log('Cabecera agregada exitosamente');
         // Realizar las acciones necesarias después de agregar la cabecera, como limpiar el formulario o actualizar la interfaz.
       } else {
@@ -37,6 +38,9 @@ function agregarCabecera() {
     var idcabecera = document.getElementById('idcabecera').value;
     var idproducto = document.getElementById('idproducto').value;
     var cantidad = document.getElementById('cantidad').value;
+    console.log('idcabecera',idcabecera);
+    console.log('idproducto',idproducto);
+    console.log('cantidad',cantidad);
   
     // Realizar la lógica para agregar el detalle al backend usando JavaScript o realizar una petición AJAX al servidor.
     // Puedes utilizar la función fetch para realizar una solicitud POST al servidor y enviar los datos en formato JSON.

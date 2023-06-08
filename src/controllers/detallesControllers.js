@@ -6,8 +6,8 @@ export const getDetalle = async(req,res) =>{
 }
 
 export const postDetalle = async(req,res) =>{
-    const {cantidad} = req.body
-    const detalle = await Detalles.create({cantidad})
+    const {idcabecera,idproducto, cantidad} = req.body
+    const detalle = await Detalles.create({idcabecera,idproducto, cantidad})
     res.json(detalle)
 }
 //PUT Detalle
