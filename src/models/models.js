@@ -130,10 +130,6 @@ export const Cabecera = sequelize.define("Cabecera", {
     },
     idmesa: {
         type: Sequelize.INTEGER,
-        references: {
-            model: Mesas,
-            key: 'id'
-        }
     },
     idcliente: {
         type: Sequelize.INTEGER,

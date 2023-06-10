@@ -24,3 +24,21 @@ export const deleteClientes = async(req,res) =>{
     const cliente = await Cliente.destroy({where: {id}})
     res.json(cliente)
 }
+
+//const Cliente = require('./models').Cliente;
+
+export const getClienteById = async (req, res) => {
+    const { id } = req.params;
+  
+    try {
+      const cliente = await Cliente.findByPk(id);
+      if (cliente) {
+        res.json(cliente);
+      } else {
+        res.status(404).json({ message: "Cliente no encontrado" });
+      }
+    } catch (error) {
+      res.status(500).json({ message: "Error al buscar el cliente" });
+    }
+  };
+  
